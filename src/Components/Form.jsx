@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Card from "./Card.jsx";
 import ErrorMsg from "./ErrorMsg.jsx";
 import "../Styles/form.css"
 import Alerta from "./Alerta.jsx";
@@ -85,7 +84,7 @@ const Form = () => {
       <br />
       <button type="submit" onClick={toggleAlerta}>Enviar consulta</button>
 
-      {alertaAbrir && <Alerta cerrar={alCerrarAlertaBorro}  usr = {usr} />}
+      {alertaAbrir && showAlerta && <Alerta cerrar={alCerrarAlertaBorro}  usr = {usr} />}
       {showError && <ErrorMsg>{errorText}</ErrorMsg>}
     </form>
     </div>
