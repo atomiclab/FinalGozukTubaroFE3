@@ -31,3 +31,17 @@
     background-color: #0056b3;
   }
   
+  /*Popup pero en oscuro*/
+
+  
+  .dark .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    border: 1px solid black;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+

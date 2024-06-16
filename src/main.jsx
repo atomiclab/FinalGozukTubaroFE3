@@ -7,9 +7,11 @@ import { ThemeProvider} from './Reducers/Themereducer';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
+
     <ThemeProvider>
+        <BrowserRouter>
       <App />
+      </BrowserRouter>
     </ThemeProvider>
-  </BrowserRouter>
+
 );
