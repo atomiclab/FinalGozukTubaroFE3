@@ -6,21 +6,13 @@ import Home from "./Pages/Home.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Favs from "./Pages/Favs.jsx";
 import Detail from "./Pages/Detail.jsx";
-import React, { useMemo, useState } from "react";
-import ThemeContext, { themes } from "./Context/theme.context.jsx";
+import { useTheme } from './Reducers/Themereducer.jsx';
+
 
 function App() {
-  const [theme, setTheme] = useState(themes.light);
-  const handleChangeTheme = () => {
-    if (theme === themes.dark) setTheme(themes.light);
-    if (theme === themes.light) setTheme(themes.dark);
-  };
-  const providerValue = useMemo(
-    () => ({ theme, handleChangeTheme }),
-    [theme, handleChangeTheme]
-  );
+  const { state, toggleDarkMode } = useTheme();
   return (
-    <ThemeContext.Provider value={providerValue}>
+  <div className={state.darkMode ? 'dark' : ''}>
         <Navbar />
         <Routes>
           <Route path={routes.home} element={<Home />} />
@@ -30,7 +22,8 @@ function App() {
           <Route path="*" element={<h1>Error 404 - Page not found</h1>} />
         </Routes>
         {/* <Footer/> */}
-    </ThemeContext.Provider>
+        </div>
+        
   );
 }
 
