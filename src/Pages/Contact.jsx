@@ -8,8 +8,8 @@ const Contact = () => {
 
   return (
     <div >
-      <h2>Want to know more?</h2>
-      <p>Send us your questions and we will contact you</p>
+      <h2>Precisas mas informacion?</h2>
+      <p>Dejanos un mensaje y a la brevedad nos contactaremos!</p>
       
       <Form/>
     </div>

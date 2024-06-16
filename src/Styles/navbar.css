@@ -1,0 +1,48 @@
+nav{
+    display: flex;
+
+    justify-content: flex-start;
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .navbar-logo img {
+    height: 30px;
+  }
+  
+  .navbar-icons {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+    align-items: center;
+  }
+  
+  .navbar-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+  .navbar-buttonDM{    background-color: #444;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 40px;
+    display: flex;
+    align-items: center;
+
+}
+  
+  .navbar-button:hover {
+    background-color: #555;
+  }
+  
