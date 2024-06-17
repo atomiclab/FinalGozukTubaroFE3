@@ -5,7 +5,7 @@ import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Favs from "./Pages/Favs.jsx";
-import Detail from "./Pages/Detail.jsx";
+import Dentista from "./Pages/Detail.jsx";
 import { useTheme } from "./Reducers/Themereducer.jsx";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
             <Route path={routes.home} element={<Home />} />
             <Route path={routes.contact} element={<Contact />} />
             <Route path={routes.favs} element={<Favs />} />
-            <Route path={routes.detail} element={<Detail />} />
+            <Route path={routes.dentista} element={<Dentista />} />
             <Route path="*" element={<h1>Error 404 - Page not found</h1>} />
           </Routes>
         </div>

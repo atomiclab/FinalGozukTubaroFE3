@@ -1,13 +1,36 @@
+import axios from "axios";
 import { createContext, useContext, useEffect, useReducer } from "react";
-import { Axios } from "axios";
 import { reducer } from "../Reducers/Reducer.js";
 
-export const initialState = { theme: "", data: [] };
+const RecipeStates = createContext();
 
-export const ContextGlobal = createContext(undefined);
+const initialState = {
+  recipes: [],
+  cart: [],
+};
 
-export const ContextProvider = ({ children }) => {
-  //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
+const Context = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, initialState); 
+  const url =
+    "https://jsonplaceholder.typicode.com/users";
 
-  return <ContextGlobal.Provider value={{}}>{children}</ContextGlobal.Provider>;
+  useEffect(() => {
+    axios(url)
+      .then((res) =>{
+       // console.log("La API respondio:", res); 
+        dispatch({ type: "GET_RECIPES", payload: res.data })
+      } )
+      .catch((err) => console.log(err));
+  }, []);
+  
+  return (
+    <RecipeStates.Provider value={{ state, dispatch }}>
+      {children}
+    </RecipeStates.Provider>
+  );
+};
+export default Context;
+
+export const useRecipeStates = () => {
+  return useContext(RecipeStates);
 };
