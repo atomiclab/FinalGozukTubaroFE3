@@ -17,6 +17,9 @@
     max-width: 800px;
     padding: 16px;
     width: 100%;
+    transition: background-color 0.3s, color 0.3s;
+   
+  
   }
   
   .details-header {
@@ -66,5 +69,7 @@
   }
   
   .dark .details-card {
-    background-color: black;
+   
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #333;
   }

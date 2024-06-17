@@ -3,8 +3,8 @@ import Card from "../Components/Card";
 import Button from "../Components/Button";
 import { useRecipeStates } from "../Context/global.context";
 import CardFav from "../Components/CardFav";
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+import { routes } from "../Utils/routes";
+import { Link } from "react-router-dom";
 
 const Favs = () => {
   const { state, dispatch } = useRecipeStates();
@@ -16,19 +16,28 @@ const Favs = () => {
   }, []);
   return (
     <>
-      <h1>Dentists Favs</h1>
+      <h1>Doctores Favoritos</h1>
       <div className="card-grid">
-        {/* este componente debe consumir los destacados del localStorage */}
-        {/* Deberan renderizar una Card por cada uno de ellos */}
-
         <div className="favorites-container">
-          <h2>Doctores Favoritos</h2>
           <div className="favorites-grid">
-            {state.favorites.map((doctor) => (
-              <CardFav key={doctor.id} doc={doctor}>
-                <Button onClick={() => handleRemoveFavorite(doctor)}>🚫</Button>
-              </CardFav>
-            ))}
+            {state.favorites.length === 0 ? (
+              <div>
+                <p>No hay doctores favoritos!</p>
+                <p>
+                  Tenes que ir a <Link to={routes.home} > Home </Link>
+                  y seleccionar uno con la estrella.
+                </p>
+              </div>
+            ) : (
+              state.favorites.map((doctor) => (
+                <CardFav key={doctor.id} doc={doctor}>
+                  <Button onClick={() => handleRemoveFavorite(doctor)}>
+                    🚫
+                  </Button>
+                </CardFav>
+              ))
+            )}
+
           </div>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "./Button";
 
 const CardFav = ({ doc, children }) => {
   return (
@@ -7,12 +6,13 @@ const CardFav = ({ doc, children }) => {
       <div className="details-card">
         <div className="details-header">
           <img
-            src="https://thispersondoesnotexist.com/"
+            src={`https://randomuser.me/api/portraits/med/lego/${doc.id - 1}.jpg`} 
             className="details-img"
             alt={`${doc.name}`}
           />
+
           <div>
-            <h2 className="details-name">Nombre: {doc.name}</h2>
+            <h2 className="details-name">{doc.name}</h2>
             <p className="details-info">
               <strong>Usuario:</strong> {doc.username}
             </p>

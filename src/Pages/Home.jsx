@@ -3,7 +3,7 @@ import Card from "../Components/Card";
 import ThemeContext, { themes } from "../Context/theme.context";
 import Button from "../Components/Button";
 import { useRecipeStates } from "../Context/global.context";
-import "../Styles/Cards.css"
+import "../Styles/Cards.css";
 
 
 const Home = () => {
@@ -24,7 +24,6 @@ const Home = () => {
 
   return (
     <main className="">
-      <h1>Home</h1>
       <h1>Lista de doctores</h1>
       <div className="card-grid">
         <div className="list-container">
@@ -39,6 +38,7 @@ const Home = () => {
             );
           })}
         </div>
+        
       </div>
     </main>
   );

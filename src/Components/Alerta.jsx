@@ -8,7 +8,7 @@ const Alerta = ({cerrar,usr}) => {
     <div className="popup-container">
     <div className="popup">
       <div className="popup-content">
-        <h2>Hola {usr.name}!</h2>
+        <h2>Gracias {usr.name}!</h2>
         <img src={img.doctor} alt="doctor" />
         <p>Tu mensaje fue enviado satisfactoriamente a nuestros especialistas, pronto recibiras una respueta.</p>
         <button onClick={cerrar}>Confirmar</button>

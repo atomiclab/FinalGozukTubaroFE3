@@ -6,7 +6,6 @@ import { ThemeProvider, useTheme } from "../Reducers/Themereducer";
 import { img } from "../Utils/constants";
 import "../Styles/navbar.css";
 
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -14,9 +13,6 @@ const Navbar = () => {
 
   return (
     <nav>
-      {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
-      {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      
       <div className="left-nav">
         <Button onClick={() => navigate(-1)}>
         <h4>⬅</h4>
@@ -36,7 +32,8 @@ const Navbar = () => {
           <h4>Favs</h4>
         </Link>
 
-        <button onClick={toggleDarkMode} className="navbar-buttonDM" ><h4>🌝</h4></button>
+  
+        <button onClick={toggleDarkMode} className="navbar-buttonDM" ><h4>{state.darkMode ? "🌞":"🌝" }</h4></button>
       </div>
     </nav>
   );

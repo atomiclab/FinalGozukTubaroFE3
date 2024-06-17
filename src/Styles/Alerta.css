@@ -9,12 +9,15 @@
     transform: translate(-50%, -50%);
     background-color: white;
     border: 1px solid #ccc;
-    padding: 20px;
+    padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   .popup-content {
     text-align: center;
+  }
+  .popup-content img {
+    width: 200px;
   }
   
   .popup button {
@@ -33,7 +36,6 @@
   
   /*Popup pero en oscuro*/
 
-  
   .dark .popup {
     position: fixed;
     top: 50%;

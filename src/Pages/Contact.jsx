@@ -1,19 +1,19 @@
-import React, { useContext } from 'react'
-import Form from '../Components/Form'
-
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+import React, { useContext } from 'react';
+import Form from '../Components/Form';
+import '../Styles/Contact.css';
+import ThemeContext from '../Context/theme.context';
 
 const Contact = () => {
+  const { theme } = useContext(ThemeContext);
 
   return (
-    <div >
-      <h2>Precisas mas informacion?</h2>
-      <p>Dejanos un mensaje y a la brevedad nos contactaremos!</p>
+    <div className={`contact-container ${theme}`}>
+      <h2>¿Precisas más información?</h2>
+      <p>¡Dejanos un mensaje y a la brevedad nos contactaremos!</p>
       
       <Form/>
     </div>
-  )
+  );
 }
 
-export default Contact
+export default Contact;
