@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
+import Button from "./Button";
 
-const CardFav = ({ doc }) => {
+const CardFav = ({ doc, children }) => {
   return (
     <div className="details-container">
       <div className="details-card">
         <div className="details-header">
-        <img
+          <img
             src="https://thispersondoesnotexist.com/"
             className="details-img"
             alt={`${doc.name}`}
@@ -26,9 +27,7 @@ const CardFav = ({ doc }) => {
             </p>
           </div>
         </div>
-        <div className="details-actions">
-          <button>FAV</button>
-        </div>
+        <div className="details-actions">{children}</div>
       </div>
     </div>
   );

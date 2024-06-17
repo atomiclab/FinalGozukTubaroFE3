@@ -7,22 +7,22 @@ const RecipeStates = createContext();
 const initialState = {
   recipes: [],
   cart: [],
+  favorites: [],
 };
 
 const Context = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, initialState); 
-  const url =
-    "https://jsonplaceholder.typicode.com/users";
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const url = "https://jsonplaceholder.typicode.com/users";
 
   useEffect(() => {
     axios(url)
-      .then((res) =>{
-       // console.log("La API respondio:", res); 
-        dispatch({ type: "GET_RECIPES", payload: res.data })
-      } )
+      .then((res) => {
+        // console.log("La API respondio:", res);
+        dispatch({ type: "GET_RECIPES", payload: res.data });
+      })
       .catch((err) => console.log(err));
   }, []);
-  
+
   return (
     <RecipeStates.Provider value={{ state, dispatch }}>
       {children}

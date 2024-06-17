@@ -1,87 +1,88 @@
 .card-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
-    padding: 16px;
-  }
-.list-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  padding: 16px;
+}
+
+.list-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
- .card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(25% - 64px); 
-    margin: 25px;
-    max-width: calc(25% - 64px); 
-    padding: 30px;
-    text-align: center;
-    transition: transform 0.2s;
-    display: flex;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-  }
-  
-  .card-img {
-    border-radius: 50%;
-    max-height: 80%;
-    margin-bottom: 16px;
-    max-width: 80%;
-  }
-  
-  .card h4 {
-    font-size: 1.5em;
-    margin-bottom: 8px;
-    color: black;
-  }
-  
-  .card p {
-    font-size: 1em;
-    margin-bottom: 16px;
-  }
-  
-  .card button {
-    background-color: #007bff;
-    border: none;
-    border-radius: 6px;
-    color: #fff;
-    cursor: pointer;
-    padding: 30px 50px;
-    text-transform: uppercase;
-    transition: background-color 0.3s;
-    font-size: 3rem;
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(25% - 64px);
+  margin: 25px;
+  max-width: calc(25% - 64px);
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.2s;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  }
-  
-  .card button:hover {
-    background-color: #0056b3;
-  }
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img {
+  border-radius: 50%;
+  max-height: 80%;
+  margin-bottom: 16px;
+  max-width: 80%;
+}
+
+.card h4 {
+  font-size: 1.5em;
+  margin-bottom: 8px;
+  color: black;
+}
+
+.card p {
+  font-size: 1em;
+  margin-bottom: 16px;
+}
+
+.card button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  padding: 30px 50px;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  font-size: 2rem;
+
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
 
 /*DARK MODE*/
 
-.dark .card
-{
+.dark .card {
   background-color: black;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex: 1 1 calc(25% - 64px); 
+  flex: 1 1 calc(25% - 64px);
   margin: 25px;
-  max-width: calc(25% - 64px); 
+  max-width: calc(25% - 64px);
   padding: 30px;
   text-align: center;
   transition: transform 0.2s;
 }
+
 .dark .card h4 {
   font-size: 1em;
   margin-bottom: 8px;
