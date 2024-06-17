@@ -50,26 +50,6 @@ a:hover{
   color: rgb(136, 136, 136);
 } 
 
-footer {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  position: relative;
-  bottom: 0;
-  width: 90%;
-  height: 40px;
-  margin-top: 2rem;
-}
-
-footer > img{
-  width: 200px;
-  margin: 0;
-}
-footer > p{
-  margin: 0;
-  padding-top: 0.7rem;
-}
 
 form{
   display: flex;
@@ -99,15 +79,7 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
-.footer {
-  background-color: #282c34;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
+
 
 /*Aca va todo lo de dark mode*/
 .dark {

@@ -1,0 +1,35 @@
+footer {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #939191;
+    color: #fff; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .dark footer {
+    background-color: #2c2c2c;
+  }
+  
+  footer .logo {
+    width: 150px; 
+  }
+  
+  footer .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  footer .social-icons img {
+    width: 30px;
+    height: 30px;
+    background-color: #000; 
+    border-radius: 50%;
+    display: block;
+    padding: 5px;
+  }
+  
+
+  

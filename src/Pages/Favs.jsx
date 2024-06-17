@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "../Components/Card";
 import Button from "../Components/Button";
 import { useRecipeStates } from "../Context/global.context";
@@ -11,6 +11,9 @@ const Favs = () => {
   const handleRemoveFavorite = (doctor) => {
     dispatch({ type: "REMOVE_FAVORITE", payload: doctor });
   };
+  useEffect(() => {
+    dispatch({ type: "INIT_FAVORITES" });
+  }, []);
   return (
     <>
       <h1>Dentists Favs</h1>
