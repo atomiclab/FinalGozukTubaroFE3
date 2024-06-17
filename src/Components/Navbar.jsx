@@ -16,11 +16,14 @@ const Navbar = () => {
     <nav>
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <Button onClick={() => navigate(-1)}>
+      
+      <div className="left-nav">
+        <Button onClick={() => navigate(-1)}>
         <h4>⬅</h4>
       </Button>
       <div className="navbar-logo">
         <img src={img.logo} alt="Logo" />
+      </div>
       </div>
       <div className="navbar-icons">
         <Link to={routes.home} className="navbar-button">
