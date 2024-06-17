@@ -6,7 +6,6 @@ import { ThemeProvider, useTheme } from "../Reducers/Themereducer";
 import { img } from "../Utils/constants";
 import "../Styles/navbar.css";
 
-
 const Navbar = () => {
   const navigate = useNavigate();
   const { state, toggleDarkMode } = useTheme();
@@ -15,11 +14,11 @@ const Navbar = () => {
     <nav>
       <div className="left-nav">
         <Button onClick={() => navigate(-1)}>
-        <h4>⬅</h4>
-      </Button>
-      <div className="navbar-logo">
-        <img src={img.logo} alt="Logo" />
-      </div>
+          <h4>⬅</h4>
+        </Button>
+        <div className="navbar-logo">
+          <img src={img.logo} alt="Logo" />
+        </div>
       </div>
       <div className="navbar-icons">
         <Link to={routes.home} className="navbar-button">
@@ -31,9 +30,9 @@ const Navbar = () => {
         <Link to={routes.favs} className="navbar-button">
           <h4>Favs</h4>
         </Link>
-
-  
-        <button onClick={toggleDarkMode} className="navbar-buttonDM" ><h4>{state.darkMode ? "🌞":"🌝" }</h4></button>
+        <button onClick={toggleDarkMode} className="navbar-buttonDM">
+          <h4>{state.darkMode ? "🌞" : "🌝"}</h4>
+        </button>
       </div>
     </nav>
   );
