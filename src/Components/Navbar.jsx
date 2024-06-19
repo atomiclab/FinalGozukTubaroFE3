@@ -2,14 +2,16 @@ import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { routes } from "../Utils/routes";
 import Button from "./Button";
-import { ThemeProvider, useTheme } from "../Reducers/Themereducer";
 import { img } from "../Utils/constants";
 import "../Styles/navbar.css";
+import { useTheme } from '../Context/global.context'; 
+
+
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const { state, toggleDarkMode } = useTheme();
-
+  const { themeState, toggleDarkMode } = useTheme();
+ 
   return (
     <nav>
       <div className="left-nav">
@@ -31,7 +33,7 @@ const Navbar = () => {
           <h4>Favs</h4>
         </Link>
         <button onClick={toggleDarkMode} className="navbar-buttonDM">
-          <h4>{state.darkMode ? "🌞" : "🌝"}</h4>
+          <h4>{themeState.darkMode ? "🌞" : "🌝"}</h4>
         </button>
       </div>
     </nav>

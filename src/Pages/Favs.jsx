@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Card from "../Components/Card";
 import Button from "../Components/Button";
 import { useRecipeStates } from "../Context/global.context";
 import CardFav from "../Components/CardFav";

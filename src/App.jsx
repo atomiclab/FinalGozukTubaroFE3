@@ -6,12 +6,14 @@ import Home from "./Pages/Home.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Favs from "./Pages/Favs.jsx";
 import Dentista from "./Pages/Detail.jsx";
-import { useTheme } from "./Reducers/Themereducer.jsx";
+//import { useTheme } from "./Reducers/Themereducer.jsx";
+import { useTheme } from './Context/global.context';
 
 function App() {
-  const { state, toggleDarkMode } = useTheme();
+  const { themeState } = useTheme(); 
+  
   return (
-    <div className={state.darkMode ? "dark" : ""}>
+    <div className={themeState.darkMode ? "dark" : ""}>
       <div className="container">
         <div className="content">
           <Navbar />

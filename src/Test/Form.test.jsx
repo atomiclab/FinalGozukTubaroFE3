@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, test, vi } from "vitest";
 import Contact from "../Pages/Contact";
-
+//TODO algunos tests
 describe("Testing Contact component", () => {
   test("Should render h2 tag", () => {
     render(<Contact />);

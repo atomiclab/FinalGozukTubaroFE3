@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Form from '../Components/Form';
 import '../Styles/Contact.css';
-import ThemeContext from '../Context/theme.context';
+import { useTheme } from '../Context/global.context';
 
 const Contact = () => {
-  const { theme } = useContext(ThemeContext);
-
+  const { themeState } = useTheme(); 
+  
   return (
-    <div className={`contact-container ${theme}`}>
+    <div className={`contact-container ${themeState.darkMode ? 'dark' : 'light'}`}>
       <h2>¿Precisas más información?</h2>
       <p>¡Dejanos un mensaje y a la brevedad nos contactaremos!</p>
       
