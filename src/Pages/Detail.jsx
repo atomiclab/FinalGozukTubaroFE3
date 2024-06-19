@@ -25,7 +25,7 @@ const Detail = () => {
   useEffect(() => {
     dispatch({ type: "INIT_FAVORITES" });
     axios(url).then((res) => setDoc(res.data));
-  }, [url]);
+  }, [dispatch, url]);
 
   return (
     <div>
