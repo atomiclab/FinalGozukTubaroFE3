@@ -4,7 +4,6 @@ import { reducer } from "../Reducers/Reducer.js";
 
 const initialState = {
   recipes: [],
-  cart: [],
   favorites: [],
   darkMode: false,
 };
